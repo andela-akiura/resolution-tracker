@@ -1,24 +1,24 @@
 {
-	"name": "resolution-tracker",
-	"version": "0.0.1",
-	"description": "An app to help track new year resolutions",
-	"main": "index.js",
-	"scripts": {
-		"test": "./node_modules/.bin/jasmine-node spec"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/andela-akiura/resolution-tracker.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/andela-akiura/resolution-tracker/issues"
-	},
-	"homepage": "https://github.com/andela-akiura/resolution-tracker#readme",
-	"dependencies": {
-		"express": "^4.13.4",
-		"jasmine-node": "^1.14.5",
-		"request": "^2.69.0"
-	}
+  "name": "resolution-tracker",
+  "version": "0.0.1",
+  "description": "An app to help track new year resolutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-akiura/resolution-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-akiura/resolution-tracker/issues"
+  },
+  "homepage": "https://github.com/andela-akiura/resolution-tracker#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jasmine-node": "^1.14.5",
+    "request": "^2.69.0"
+  }
 }
