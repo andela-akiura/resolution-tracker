@@ -27,3 +27,13 @@ exports.postUser = function(req, res) {
     });
   });
 };
+
+exports.getUsers = function(req, res) {
+  User.find(function(err, users) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.json(users);
+    }
+  });
+};
