@@ -2,21 +2,14 @@ var express = require("express");
 var app = express();
 var exports = module.exports = {};
 var router = express.Router();
+var path = require('path');
+var bodyParser = require('body-parser');
+var morgan = require('morgan');
 
 app.use(express.static(path.join(__dirname, "public")));
 
 //log all requests 
 app.use(morgan("dev"));
-
-// index
-router.get("/", function(req, res) {
-  res.json({
-    API: "Resolution Tracker",
-    version: "1",
-    author: "github.com/andela-akiura",
-    issues: "https://github.com/andela-akiura/resolution-tracker/issues"
-  });
-});
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -30,6 +23,16 @@ app.use(function(req, res, next) {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST");
   res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type, Authorization");
   next();
+});
+
+// index
+router.get("/", function(req, res) {
+  res.json({
+    API: "Resolution Tracker",
+    version: "1",
+    author: "github.com/andela-akiura",
+    issues: "https://github.com/andela-akiura/resolution-tracker/issues"
+  });
 });
 
 // all routes follow from the api :)
