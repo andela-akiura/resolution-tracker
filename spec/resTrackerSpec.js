@@ -1,18 +1,23 @@
 var request = require("request");
+var server = require("../server.js");
 
-var home_url = "http://127.0.0.1:3000/"
+var root_url = "http://localhost:3000/"
 
 describe("Resolution Tracker Server", function() {
-  it("returns status code 200", function() {
-    request.get(home_url, function(error, response, body) {
-      console.log(response.statusCode)
-      expect(response.statusCode).toBe(200);
+  describe("GET /", function() {
+    it("returns status code 200", function(done) {
+      request.get(root_url, function(error, response, body) {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
     });
-  });
 
-  it("returns API", function() {
-    request.get(home_url, function(error, response, body) {
-      expect(body).toBe("API");
+    it("returns \"API\"", function(done) {
+      request.get(root_url, function(error, response, body) {
+        expect(body).toBe("API");
+        server.closeServer();
+        done();
+      });
     });
   });
 });

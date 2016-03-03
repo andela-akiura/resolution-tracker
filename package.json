@@ -4,7 +4,8 @@
   "description": "An app to help track new year resolutions",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-node spec"
+    "test": "jasmine-node spec",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
